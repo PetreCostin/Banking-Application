@@ -5,12 +5,10 @@ const migrate = async () => {
   for (const statement of migrationStatements) {
     await run(statement);
   }
-  // eslint-disable-next-line no-console
-  console.log('Migrations applied successfully');
+    console.warn('Migrations applied successfully');
 };
 
 migrate().catch((error) => {
-  // eslint-disable-next-line no-console
-  console.error(error);
+    console.error(error);
   process.exit(1);
 });

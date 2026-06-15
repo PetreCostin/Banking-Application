@@ -38,12 +38,10 @@ const seed = async () => {
     ]);
   }
 
-  // eslint-disable-next-line no-console
-  console.log('Seed data applied successfully');
+    console.warn('Seed data applied successfully');
 };
 
 seed().catch((error) => {
-  // eslint-disable-next-line no-console
-  console.error(error);
+    console.error(error);
   process.exit(1);
 });

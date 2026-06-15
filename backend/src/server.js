@@ -9,13 +9,11 @@ const bootstrap = async () => {
   }
 
   app.listen(env.port, () => {
-    // eslint-disable-next-line no-console
-    console.log(`banking-backend listening on port ${env.port}`);
+        console.warn(`banking-backend listening on port ${env.port}`);
   });
 };
 
 bootstrap().catch((error) => {
-  // eslint-disable-next-line no-console
-  console.error('Failed to start server', error);
+    console.error('Failed to start server', error);
   process.exit(1);
 });

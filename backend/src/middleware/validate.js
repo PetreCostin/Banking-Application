@@ -2,9 +2,9 @@ import { AppError } from '../lib/errors.js';
 
 export const validate = (schema) => (req, _res, next) => {
   const result = schema.safeParse({
-    body: req.body,
-    query: req.query,
-    params: req.params,
+    body: req.body ?? {},
+    query: req.query ?? {},
+    params: req.params ?? {},
   });
 
   if (!result.success) {
